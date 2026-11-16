@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bunker Gear Wash Log</title>
+  <meta name="description" content="Record who washed bunker gear and when, for secondary exposure record keeping.">
+  <meta name="theme-color" content="#b3261e">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="icons/icon.svg" alt="" width="32" height="32">
+      <div>
+        <h1>Bunker Gear Wash Log</h1>
+        <p class="sub">Secondary exposure record</p>
+      </div>
+    </div>
+    <div class="status" id="status" role="status" aria-live="polite">
+      <span class="dot" id="statusDot"></span><span id="statusText">Checking…</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="banner warn" id="setupBanner" hidden>
+      <strong>Setup needed.</strong> The shared record is not connected yet. Follow
+      <em>SETUP.md</em> and paste the web app URL into <code>js/config.js</code>.
+    </div>
+
+    <!-- LOGIN -->
+    <section class="card" id="loginView" hidden aria-labelledby="loginTitle">
+      <h2 id="loginTitle">Enter password</h2>
+      <p class="hint">Ask your officer for the station entry password.</p>
+      <form id="loginForm" novalidate>
+        <label for="entryPassword">Entry password</label>
+        <input id="entryPassword" type="password" autocomplete="current-password" required>
+        <p class="error" id="loginError" role="alert" hidden></p>
+        <button class="btn primary" type="submit" id="loginBtn">Unlock</button>
+      </form>
+    </section>
+
+    <!-- APP -->
+    <div id="appView" hidden>
+      <nav class="tabs" role="tablist" aria-label="Sections">
+        <button role="tab" id="tabLog" aria-selected="true" aria-controls="logPanel">Log a wash</button>
+        <button role="tab" id="tabRecords" aria-selected="false" aria-controls="recordsPanel">Records</button>
+      </nav>
+
+      <section class="card" id="logPanel" role="tabpanel" aria-labelledby="tabLog">
+        <form id="washForm" novalidate>
+          <label for="lastName">Employee last name</label>
+          <input id="lastName" name="lastName" type="text" autocomplete="off" autocapitalize="words"
+                 maxlength="40" required>
+          <p class="error" id="lastNameError" hidden></p>
+
+          <label for="empNo">Employee number</label>
+          <input id="empNo" name="empNo" type="text" inputmode="text" autocomplete="off"
+                 autocapitalize="characters" maxlength="15" required>
+          <p class="error" id="empNoError" hidden></p>
+
+          <label for="washDate">Date gear was washed</label>
+          <input id="washDate" name="washDate" type="date" required>
+          <p class="error" id="washDateError" hidden></p>
+
+          <p class="error" id="formError" role="alert" hidden></p>
+          <button class="btn primary" type="submit" id="submitBtn">Log wash</button>
+        </form>
+
+        <div class="banner ok" id="savedBanner" role="status" hidden></div>
+
+        <div id="recentWrap" hidden>
+          <h3>Logged on this device today</h3>
+          <ul class="recent" id="recentList"></ul>
+        </div>
+      </section>
+
+      <section class="card" id="recordsPanel" role="tabpanel" aria-labelledby="tabRecords" hidden>
+        <div id="pinGate">
+          <h2>Admin records</h2>
+          <p class="hint">Viewing and downloading records needs the admin PIN.</p>
+          <form id="pinForm" novalidate>
+            <label for="adminPin">Admin PIN</label>
+            <input id="adminPin" type="password" autocomplete="off" required>
+            <p class="error" id="pinError" role="alert" hidden></p>
+            <button class="btn primary" type="submit" id="pinBtn">Open records</button>
+          </form>
+        </div>
+
+        <div id="recordsView" hidden>
+          <div class="toolbar">
+            <input id="search" type="search" placeholder="Search name, number or date" aria-label="Search records">
+            <button class="btn" id="refreshBtn" type="button">Refresh</button>
+          </div>
+          <div class="toolbar">
+            <button class="btn primary" id="csvBtn" type="button">Download CSV</button>
+            <button class="btn primary" id="xlsxBtn" type="button">Download Excel</button>
+            <button class="btn ghost" id="lockBtn" type="button">Close records</button>
+          </div>
+          <p class="hint" id="countText"></p>
+          <p class="error" id="recordsError" role="alert" hidden></p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Date washed</th><th>Last name</th><th>Employee #</th><th>Logged at</th></tr>
+              </thead>
+              <tbody id="recordsBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <div class="foot">
+        <button class="linkbtn" id="signOutBtn" type="button">Lock this device</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
