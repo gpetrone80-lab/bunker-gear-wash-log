@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" role="img" aria-labelledby="t d">
+<title id="t">Firefighter bunker gear</title>
+<desc id="d">A fire helmet, a turnout coat and turnout pants with reflective yellow trim.</desc>
+<rect width="640" height="200" fill="#2A2621"/>
+<rect y="176" width="640" height="6" fill="#D6E02A"/>
+<rect y="186" width="640" height="6" fill="#D6E02A"/>
+<g transform="translate(122 84)">
+<path d="M-56 22C-56-46 56-46 56 22Z" fill="#C8202A"/>
+<path d="M-4-40H4L7 22H-7Z" fill="#8F1A20"/>
+<path d="M-64 22H64L98 56Q0 68-98 56Z" fill="#8F1A20"/>
+<path d="M-18-20H18V0L0 14-18 0Z" fill="#D6E02A"/>
+</g>
+<g transform="translate(240 18) scale(0.5) translate(-96 -112)"><polygon fill="#C4A56B" points="186,128 140,140 96,350 148,364 182,232"/><polygon fill="#C4A56B" points="330,232 364,364 416,350 372,140 326,128"/><polygon fill="#D8BF8A" points="186,128 326,128 340,400 172,400"/><polygon fill="#2A2621" points="224,124 288,124 256,170"/><polygon fill="#8A7344" points="253,170 259,170 259,400 253,400"/><polygon fill="#D6E02A" points="177.3,296 334.7,296 335.4,310 176.6,310"/><polygon fill="#D6E02A" points="175.3,326 336.7,326 337.4,340 174.6,340"/><polygon fill="#D6E02A" points="106.5,300 164.5,300 160.9,314 103.6,314"/><polygon fill="#D6E02A" points="408.4,314 351.1,314 347.5,300 405.5,300"/></g>
+<g transform="translate(522 18)">
+<path d="M-46 0H46V24H-46Z" fill="#C4A56B"/>
+<path d="M-46 24H-2L-7 146H-40Z" fill="#D8BF8A"/>
+<path d="M46 24H2L7 146H40Z" fill="#D8BF8A"/>
+<path d="M-44.4 98H-5.6L-5.9 108H-42.2Z" fill="#D6E02A"/>
+<path d="M44.4 98H5.6L5.9 108H42.2Z" fill="#D6E02A"/>
+<path d="M-42.8 120H-4.9L-5.2 130H-40.6Z" fill="#D6E02A"/>
+<path d="M42.8 120H4.9L5.2 130H40.6Z" fill="#D6E02A"/>
+</g>
+</svg>
