@@ -1,5 +1,5 @@
-// Paste the Google Apps Script "Web app" URL between the quotes after you deploy it.
-// See SETUP.md. It looks like: https://script.google.com/macros/s/AKfy.../exec
+// Web app URL of the Google Apps Script backend (see SETUP.md).
+// This URL is not a secret by itself: every request still needs the entry password or admin PIN.
 window.BGW_CONFIG = {
-  APPS_SCRIPT_URL: ""
+  APPS_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbyE773uXvgPMRAkCJ4VAyG3hbCv_a6ww8xJuIgADDbL6kohUeiw-dZjTMNYwCCGUoTnKQ/exec"
 };
