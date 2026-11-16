@@ -81,11 +81,13 @@
 
   // ---------- views ----------
   function showLogin() {
+    document.body.dataset.view = 'login';
     show($('loginView'), true);
     show($('appView'), false);
     setTimeout(function () { $('entryPassword').focus(); }, 0);
   }
   function showApp() {
+    document.body.dataset.view = 'app';
     show($('loginView'), false);
     show($('appView'), true);
     $('washDate').max = todayISO();

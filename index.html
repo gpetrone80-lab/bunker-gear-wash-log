@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Bunker Gear Wash Log</title>
   <meta name="description" content="Record who washed bunker gear and when, for secondary exposure record keeping.">
-  <meta name="theme-color" content="#151516">
-  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
   <meta name="robots" content="noindex, nofollow">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -16,7 +16,7 @@
 <body>
   <header class="topbar">
     <div class="brand">
-      <img src="icons/logo.png" alt="Fire department logo" width="44" height="44">
+      <img src="icons/logo-256.png" alt="" width="40" height="40">
       <div>
         <h1>Bunker Gear Wash Log</h1>
         <p class="sub">Secondary exposure record</p>
@@ -26,11 +26,13 @@
       <span class="dot" id="statusDot"></span><span id="statusText">Checking…</span>
     </div>
   </header>
-  <div class="trim" aria-hidden="true"></div>
 
   <main>
-    <img class="hero" src="icons/hero.svg" width="640" height="200"
-         alt="Illustration of firefighter bunker gear: helmet, turnout coat and pants with reflective trim">
+    <div class="welcome">
+      <img src="icons/logo-512.png" width="168" height="168" alt="Palm Harbor fire department Maltese cross logo">
+      <h1>Bunker Gear Wash Log</h1>
+      <p>Secondary exposure record</p>
+    </div>
     <div class="banner warn" id="setupBanner" hidden>
       <strong>Setup needed.</strong> The shared record is not connected yet. Follow
       <em>SETUP.md</em> and paste the web app URL into <code>js/config.js</code>.
@@ -38,6 +40,7 @@
 
     <!-- LOGIN -->
     <section class="card" id="loginView" hidden aria-labelledby="loginTitle">
+      <div class="accent-bar" aria-hidden="true"></div>
       <h2 id="loginTitle">Enter password</h2>
       <p class="hint">Ask your officer for the station entry password.</p>
       <form id="loginForm" novalidate>

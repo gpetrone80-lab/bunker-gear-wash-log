@@ -1,6 +1,6 @@
 // Caches the app shell so the form loads offline. Data is never cached.
-var CACHE = 'bgw-shell-v4';
-var SHELL = ['./', 'index.html', 'css/style.css', 'js/app.js', 'js/config.js', 'manifest.webmanifest', 'favicon.ico', 'icons/logo.png', 'icons/hero.svg'];
+var CACHE = 'bgw-shell-v5';
+var SHELL = ['./', 'index.html', 'css/style.css', 'js/app.js', 'js/config.js', 'manifest.webmanifest', 'favicon.ico', 'icons/logo-256.png', 'icons/logo-512.png'];
 
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(SHELL); }).then(function () { return self.skipWaiting(); }));
