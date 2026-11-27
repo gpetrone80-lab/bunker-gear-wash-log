@@ -1,5 +1,7 @@
 # Bunker Gear Wash Log
 
+**Live site:** [https://gpetrone80-lab.github.io/bunker-gear-wash-log/](https://gpetrone80-lab.github.io/bunker-gear-wash-log/)
+
 A simple installable web app that records **who washed bunker gear and when**, for secondary-exposure record keeping.
 
 Each entry captures:
